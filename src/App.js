@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+  let imagen = "stacker-quintuple (1).png"
+  let titulo ="Stacker Quíntuple"
+  let descripcion ="5 carnes a la parri, salsa stacker, pan, queso cheddar, panceta. Solo para expertos"
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="container">
+     <div className="row">
+        <div className ="col-md-2">
+          <img src = {imagen} alt = {titulo} className = "image-fluid" />
+        </div>
+        <div className = "col-md-2">
+          <h1> {titulo} </h1>
+          <p> {descripcion}</p>
+        </div>
+      </div>
+  </div>
   );
 }
 
