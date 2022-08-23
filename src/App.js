@@ -1,5 +1,7 @@
 
 import './App.css';
+import 'core-js/actual';
+import Navbar from './componentes/Navbar';
 
 function App() {
   let imagen = "stacker-quintuple (1).png"
@@ -7,7 +9,9 @@ function App() {
   let descripcion ="5 carnes a la parri, salsa stacker, pan, queso cheddar, panceta. Solo para expertos"
 
   return (
-   <div className="container">
+  
+    <div className="container">
+    <Navbar />
      <div className="row">
         <div className ="col-md-2">
           <img src = {imagen} alt = {titulo} className = "image-fluid" />
