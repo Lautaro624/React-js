@@ -2,6 +2,8 @@
 import './App.css';
 import 'core-js/actual';
 import Navbar from './componentes/Navbar';
+import Itemlistcontainer from './componentes/Itemlistcontainer';
+
 
 function App() {
   let imagen = "stacker-quintuple (1).png"
@@ -12,6 +14,7 @@ function App() {
   
     <div className="container">
     <Navbar />
+    <Itemlistcontainer />
      <div className="row">
         <div className ="col-md-2">
           <img src = {imagen} alt = {titulo} className = "image-fluid" />
