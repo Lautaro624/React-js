@@ -14,7 +14,7 @@ function App() {
   
     <div className="container">
     <Navbar />
-    <Itemlistcontainer />
+    <Itemlistcontainer greeting="Bienvenidos!"  />
      <div className="row">
         <div className ="col-md-2">
           <img src = {imagen} alt = {titulo} className = "image-fluid" />
