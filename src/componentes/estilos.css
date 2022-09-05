@@ -8,4 +8,11 @@ i {
     
 }
 
-
+.contador {
+    width: fit-content;
+    background-color: #c90a0a;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
