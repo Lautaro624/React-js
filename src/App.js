@@ -6,16 +6,11 @@ import Itemlistcontainer from './componentes/Itemlistcontainer';
 
 
 function App() {
+  /*
   let imagen = "stacker-quintuple (1).png"
   let titulo ="Stacker Quíntuple"
   let descripcion ="5 carnes a la parri, salsa stacker, pan, queso cheddar, panceta. Solo para expertos"
-
-  return (
-  
-    <div className="container">
-    <Navbar />
-    <Itemlistcontainer greeting="Bienvenidos!"  />
-     <div className="row">
+  <div className="row">
         <div className ="col-md-2">
           <img src = {imagen} alt = {titulo} className = "image-fluid" />
         </div>
@@ -24,7 +19,17 @@ function App() {
           <p> {descripcion}</p>
         </div>
       </div>
-  </div>
+  */
+
+  return (
+  
+    <div className="container">
+    <Navbar />
+    <Itemlistcontainer greeting="Bienvenidos!"  />
+    
+
+     
+    </div>
   );
 }
 
