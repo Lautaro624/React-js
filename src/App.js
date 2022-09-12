@@ -1,8 +1,11 @@
-
+import React, {useState, useEffect} from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import 'core-js/actual';
 import Navbar from './componentes/Navbar';
 import Itemlistcontainer from './componentes/Itemlistcontainer';
+import Itemdetailcontainer from "./componentes/Itemdetailcontainer";
+
 
 
 function App() {
@@ -25,7 +28,7 @@ function App() {
   
     <div className="container">
     <Navbar />
-    <Itemlistcontainer greeting="Bienvenidos!"  />
+    <Itemdetailcontainer />
     
 
      
