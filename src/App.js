@@ -27,8 +27,14 @@ function App() {
   return (
   
     <div className="container">
-    <Navbar />
-    <Itemdetailcontainer />
+    <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Itemlistcontainer/>} />
+          <Route path='/categoria/:categoriaId' element={<Itemlistcontainer/>} />
+          <Route path='detalle/:detalleId' element={<Itemdetailcontainer/>} />
+        </Routes>
+    </BrowserRouter>
     
 
      

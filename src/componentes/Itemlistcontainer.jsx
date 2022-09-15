@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Itemcount from "./Itemcount";
 import Itemlist from "./Itemlist";
-
+import { useParams } from "react-router-dom"
 
 
 const productos = [
@@ -14,6 +14,8 @@ const Itemlistcontainer = (props) => {
 
     const [data, setData] = useState([])
 
+    const {categoriaId} = useParams();
+
     useEffect(() =>{
         const getData = new Promise(resolve => {
             setTimeout(() => {
@@ -21,9 +23,13 @@ const Itemlistcontainer = (props) => {
             }, 3000)
         })
 
-        getData.then(res => setData(res))
+        if(categoriaId) {
+            getData.then(res => setData(res.filter(albums => albums.category === categoriaId)));
+        } else{
+        getData.then(res => setData(res));
+        }
 
-    },[])
+    }, [categoriaId])
 
 
     const onAdd = (valor) => {

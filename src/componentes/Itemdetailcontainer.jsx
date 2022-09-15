@@ -1,22 +1,22 @@
 import React, {useState, useEffect} from "react";
 import Itemdetail from "./Itemdetail";
+import Productos from "./Productos";
+import { useParams } from "react-router-dom";
 
-const Producto = {id:1, image: "../images/gibson-lespaul-bonamassa.png", tittle: "Gibson les paul Joe Bonamassa", price: "usd 900" }
 
 const Itemdetailcontainer = () => {
-
-    const [item, setItem] = useState ({}) 
+    const [item, setItem] = useState ({});
+    const { detalleId } = useParams(); 
     
-    useEffect (() => {
-
+    useEffect(() => {
         const getItem = new Promise (resolve => {
-            setTimeout(() => {
-                resolve(Producto)
-            }, 2000)
-        })
-
-        getItem.then(res => setItem(res))
-    },[])
+            setTimeout (() => {
+                resolve(Productos);
+            }, 2000);
+        });
+        getItem.then(res => setItem(res.find(producto => producto.id === parseInt(detalleId))));
+    }, [])
+    
     
     return (
         
